@@ -1,1 +1,3 @@
 .idea/
+__Tests/*
+test.html

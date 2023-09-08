@@ -60,34 +60,30 @@ combos(10);
 ]
 */
 
-// function combos(num) {
-//
-// }
-
 function combos(num) {
   function genNumbers(target, start, current) {
     if (target === 0) {
       // When target number decreased up to zero, add copied set of numbers to the resulting array, and stop current recursion
-      result.push([...current]);
+      result.push([...current])
       return;
     }
 
     for (let i = start; i <= target; i++) {
       // Add new number to the set of numbers
-      current.push(i);
+      current.push(i)
       // Re-lunch numbers generation
-      genNumbers(target - i, i, current);
+      genNumbers(target - i, i, current)
       // Removes the last element from an array
-      current.pop();
+      current.pop()
     }
   }
 
-  const result = [];
+  const result = []
   // Run recursive numbers generation
-  genNumbers(num, 1, []);
+  genNumbers(num, 1, [])
 
-  return result;
+  return result
 }
 
-console.log(combos(3));
-console.log(combos(10));
+console.log(combos(3))
+console.log(combos(10))
